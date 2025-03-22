@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .resume-container {
+            width: 70%;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            font-weight: 300;
+            color: #777;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .section {
+            margin: 20px 0;
+        }
+
+        .section h3 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            color: #555;
+        }
+
+        .skills li {
+            list-style: none;
+            background: #efefef;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <h1>Vivek Gond</h1>
+        <h2>DevOps Engineer at RSTForum | 8+ Years of Experience</h2>
+
+        <div class="section">
+            <h3>Professional Summary</h3>
+            <p>Experienced DevOps Engineer specializing in automation, cloud technologies, and infrastructure management. Adept at working with Azure, AWS, Terraform, Python, and database systems to streamline processes and boost efficiency.</p>
+        </div>
+
+        <div class="section">
+            <h3>Skills</h3>
+            <ul class="skills">
+                <li>Cloud Platforms: Azure, AWS</li>
+                <li>Infrastructure as Code: Terraform</li>
+                <li>Programming: Python</li>
+                <li>Database Management</li>
+                <li>CI/CD Pipeline Automation</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
